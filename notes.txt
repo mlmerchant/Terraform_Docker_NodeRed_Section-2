@@ -1,0 +1,76 @@
+terraform fmt -diff
+# This command formats the Terraform configuration files and shows the differences.
+
+terraform init
+# Initializes a Terraform working directory, sets up backend and provider plugins.
+
+terraform plan
+# Generates an execution plan, showing the changes to be made to your infrastructure.
+
+terraform plan --output=file1
+# Same as terraform plan, but the output will be saved to a file named 'file1'.
+
+terraform apply
+# Applies the proposed changes to the infrastructure.
+
+terraform apply --auto-approve
+# Applies the proposed changes to the infrastructure without prompting for approval.
+
+terraform show
+# Displays the current state of the infrastructure.
+
+terraform show --json | jq
+# Displays the current state of the infrastructure in JSON format and pipes the output to 'jq' for pretty printing.
+
+terraform refresh
+# Updates the state file with the current state of the infrastructure.
+
+terraform state list
+# Lists all the resources in the current state.
+
+terraform output
+# Displays the output values from the current state.
+
+terraform destroy -target [item]
+# Destroys the specified resource.
+
+terraform state rm [item]
+# Removes the specified resource from the state.
+
+terraform import docker_container.name {ID}
+# Imports an existing resource into Terraform management.
+
+terraform console
+# Opens an interactive console for evaluating expressions.
+
+terraform apply -var foo=bar
+# Applies changes with a custom variable 'foo' set to 'bar'.
+
+export TF_VAR_foo=bar
+# Sets an environment variable for Terraform.
+
+unset TF_VAR_foo
+# Unsets the environment variable for Terraform.
+
+terraform plan -var-file=aaa.tfvars
+# Generates an execution plan using the variable values defined in the file 'aaa.tfvars'.
+
+terraform plan -var ext_port=1880
+# Generates an execution plan with a custom variable 'ext_port' set to 1880.
+
+# Note: Variable Precedence based on the CLI is that the variable further left in the CLI wins.
+
+terraform plan -var="env=dev" | grep name
+# Generates an execution plan with a custom variable 'env' set to 'dev', and filters the output to show lines containing 'name'.
+
+terraform workspace new dev
+# Creates a new workspace called 'dev'.
+
+terraform workspace show
+# Displays the current active workspace.
+
+terraform workspace list
+# Lists all available workspaces.
+
+terraform workspace select dev
+# Selects the 'dev' workspace.
