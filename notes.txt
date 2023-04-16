@@ -1,6 +1,9 @@
 terraform fmt -diff
 # This command formats the Terraform configuration files and shows the differences.
 
+terraform validate
+# Check the syntax and validity of Terraform configuration files in the current directory. 
+
 terraform init
 # Initializes a Terraform working directory, sets up backend and provider plugins.
 
@@ -8,7 +11,7 @@ terraform plan
 # Generates an execution plan, showing the changes to be made to your infrastructure.
 
 terraform plan --output=file1
-# Same as terraform plan, but the output will be saved to a file named 'file1'.
+# Same as terraform plan, but the output will be saved to a file named 'file1'
 
 terraform apply
 # Applies the proposed changes to the infrastructure.
