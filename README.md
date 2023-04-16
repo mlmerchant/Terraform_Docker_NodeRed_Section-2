@@ -1,5 +1,5 @@
 # terraform-docker-NodeRed
-Terraform project following section 2 of Derek Morgan's More than Certified in Terraform".
+This was a Terraform project following section 2 of Derek Morgan's "More than Certified in Terraform".
 
 This project depends on the ext_port variable either being defined in terraform.tfvars or passed in as an argument when performing terraform deploy.  Below is an example configuration:
 
