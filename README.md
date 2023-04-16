@@ -6,6 +6,8 @@ This project depends on the ext_port variable either being defined in terraform.
 ext_port = {
   dev  = [1980, 1981]
   prod = [1880, 1881]
-}
+
+
+The number of ports passed in for the selected environment dictates the number of containers that will be started.
 
 To deploy, "terraform deploy" from either a "prod" or "dev" workspace.
